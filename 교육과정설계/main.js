@@ -29,4 +29,22 @@ function solution(exam, user) {
   return result === exam ? "YES" : "NO";
 }
 
+// 강의 풀이
+// function solution(need, plan) {
+//   let answer = "YES";
+//   let queue = need.split("");
+//   for (let x of plan) {
+//     // includes를 사용해서 find와 비교해 메모리 낭비가 줄었음.
+//     // plan을 돌면서 현재 plan 배열값을 need가 가지고 있을경우 실행
+//     if (queue.includes(x)) {
+//       // 현재 plan 값이 need의 첫번째 값이 아닐 경우 순서가 틀렸다는 것이므로 바로 NO 반환
+//       if (x !== queue.shift()) return "NO";
+//     }
+//   }
+
+//   // 루프문을 다 돌았을때 남은 배열이 있다면 모두 있는게 아니므로 NO값을 반환한다.
+//   if (queue.length > 0) return "NO";
+//   return answer;
+// }
+
 console.log(solution("CBA", "CDBAGE"));
